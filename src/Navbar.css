@@ -1,0 +1,29 @@
+.navbar {
+    background-color: #333;
+    color: #d9dc40;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo a {
+    color: #d9dc40;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar-links li {
+    margin-right: 10px;
+}
+
+.navbar-links li a {
+    color: #d9dc40;
+    text-decoration: none;
+}
