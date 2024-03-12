@@ -32,7 +32,7 @@ const MyForm = () => {
             console.log(formData);
             const response = await axios({
                 method: 'post',
-                url: 'http://127.0.0.1:3000/mvp/calculate',
+                url: 'https://mdisinntbif4csncmqi2e56dte0ntupn.lambda-url.eu-central-1.on.aws/mvp/calculate',
                 data: JSON.stringify(formData),
                 headers: {
                     'Content-Type': 'application/json',
