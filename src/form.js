@@ -15,7 +15,6 @@ const MyForm = () => {
         cliffPeriod: '',
         vestingPeriod: '',
         vestingPercentage: '',
-        // Add more fields as needed
     });
 
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -40,7 +39,6 @@ const MyForm = () => {
             });
             console.log(response.data);
 
-            // <PieChart data={} />
             setChartData({ "allocated shares": response.data.number_of_allocated_shares - response.data.vested_shares, "vested shares": response.data.vested_shares });
             setModalIsOpen(true);
 
