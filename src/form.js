@@ -3,6 +3,8 @@ import axios from 'axios';
 import PieChart from './chart';
 import Modal from 'react-modal';
 import { AiOutlineClose } from 'react-icons/ai';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -37,8 +39,6 @@ const MyForm = () => {
                     'Content-Type': 'application/json',
                 },
             });
-            console.log(response.data);
-
             setChartData({ "allocated shares": response.data.number_of_allocated_shares - response.data.vested_shares, "vested shares": response.data.vested_shares });
             setModalIsOpen(true);
 
@@ -52,6 +52,7 @@ const MyForm = () => {
             });
         } catch (error) {
             console.error(error);
+            toast.error('Error occurred');
         }
     };
 
@@ -135,6 +136,7 @@ const MyForm = () => {
     };
     return (
         <div style={containerStyle}>
+            <ToastContainer />
             <form onSubmit={handleSubmit} style={formStyle}>
                 <label for="agreementStartDate" style={labelStyle}>Agreement Start Date:</label>
 
