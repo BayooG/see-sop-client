@@ -16,7 +16,7 @@ const MyForm = () => {
         numberOfAllocatedShares: '',
         cliffPeriod: '',
         vestingPeriod: '',
-        vestingPercentage: '',
+        vestingPercentage: null,
     });
 
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -178,15 +178,7 @@ const MyForm = () => {
                     style={inputStyle}
                     placeholder="the vesting period in months"
                 />
-                <label for="vestingPercentage" style={labelStyle}>Vesting Percentage:</label>
-                <input
-                    type="number"
-                    name="vestingPercentage"
-                    value={formData.vestingPercentage}
-                    onChange={handleChange}
-                    style={inputStyle}
-                    placeholder="the vesting percentage per vesting period"
-                />
+
                 <button type="submit" style={buttonStyle}>Submit</button>
             </form>
             <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}
